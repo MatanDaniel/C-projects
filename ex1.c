@@ -1,10 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-/* Assignment: 3
+/* Assignment: 2
 Author: Matan Daniel, ID: 315783522
 */
-#define N  10
-#define M 5
 #define VALUE -1
 int SubArray(int arr1[], int arr2[], int size1, int size2)
 {
@@ -62,7 +60,7 @@ int SequenceOfArray(int arr1[], int size1)
 			counter2 = 0;
 		}
 	}
-	printf("Longest series: ");
+	printf("Longest serie: ");
 	for (int i = index; i < index + max + 1; i++)
 	{
 		printf("%d ", arr1[i]);
@@ -70,18 +68,12 @@ int SequenceOfArray(int arr1[], int size1)
 	return counter1;
 }
 int main(void) {
-	int One[N], Two[M];
-	printf("Enter elements to array one:\n");
-	for (int i = 0; i < N; i++)
-	{
-		scanf("%d", &One[i]);
-	}
-	printf("Enter elements too array two:\n");
-	for (int i = 0; i < M; i++)
-	{
-		scanf("%d", &Two[i]);
-	}
-	printf("%d\n", SubArray(One, Two, N, M));
-	printf("%d\n", SequenceOfArray(One, N));
+	int arr1[] = { -3, 8, 23, -60, -54, 6, 87, -43, 12, -7 };
+	int size1 = 10;
+	printf("%d\n", SequenceOfArray(arr1, size1));
+
+	/*int arr1[] = {9 , 5, 12, 7, 8, -2, 4, 32, 900, 13}, arr2[] = {9, 5, 12, 8, 7};
+	int size1 = 10, size2 = 5;
+	printf("%d\n", SubArray(arr1, arr2, size1, size2));*/
 	return 0;
 }

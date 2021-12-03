@@ -11,13 +11,13 @@ int SubArray(int arr1[], int arr2[], int size1, int size2)
 	int index = 0, flag = 1; // init local value 
 	for (int i = 0; i < size1; i++) // Running through the first array
 	{
-		if (arr1[i] == arr2[0]){ // Checks if the second array first index, matches the first array index
+		if (arr1[i] == arr2[0]) { // Checks if the second array first index, matches the first array index
 			for (int j = i; j < size2 + i; j++, index++) 	// Keeps on checking if the next elements equals between the two array
 			{
 				if (arr1[j] != arr2[index]) // Checks wether there is a match, or not
 				{
 					flag = -1;
-				}	
+				}
 			}
 			if (flag == 1) // We find the arr2, in arr1
 			{
@@ -33,16 +33,16 @@ int SubArray(int arr1[], int arr2[], int size1, int size2)
 	}
 	printf("The sub-array doesnt exist in the array\n");
 	return VALUE;
-} 
+}
 int SequenceOfArray(int arr1[], int size1)
 {
-	int counter1 = 0 , counter2 = 0, max = 0, index = 0;
+	int counter1 = 0, counter2 = 0, max = 0, index = 0;
 	for (int i = 0; i < size1; i++)
 	{
 		if (arr1[i] < arr1[i + 1])
 		{
 			counter1++;
-			for (int j = i; j < size1; j++) 
+			for (int j = i; j < size1; j++)
 			{
 				if (arr1[j] < arr1[j + 1])
 				{
